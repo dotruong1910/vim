@@ -29,25 +29,33 @@ Plug 'junegunn/fzf.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'ervandew/supertab'
 call plug#end()
 
+"font size
+"Guifont Hack:h20
 
-
+"rainbow
 let g:rainbow_active = 1
+
+
+"hien so dong
 :set number
 
-
+"theme
 syntax on
 set background=dark
 colorscheme solarized8
 g:solarized_extra_hi_groups
 
-
+"status
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-
+"syntastic
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -66,7 +74,7 @@ endfunction
 nnoremap <F8> :call ToggleSyntastic()<CR>
 
 
-
+"tab but not work
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
